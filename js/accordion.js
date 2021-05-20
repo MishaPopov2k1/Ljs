@@ -3,6 +3,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const featureLinksElems = document.querySelectorAll('.feature__link ');
     const featureSubElems = document.querySelectorAll('.feature-sub');
 
+    const handlerAccordion = (btn, index) => {
+
+        btn.addEventListener('click', () => {
+
+            featureSubElems.forEach((featureSubElem, i) => {
+                if (index === i) {
+                    featureSubElems[index].classList.toggle('hidden')
+                } else {
+                    featureSubElem.classList.add('hidden')
+                }
+            });
+
+            featureLinksElems.forEach((featureLinksElem) => {
+                if (featureLinksElem === btn) {
+                    btn.classList.toggle('feature__link_active')
+                } else {
+                    featureLinksElem.classList.remove('feature__link_active')
+                }
+            });
+        })
+    }
+
+    featureLinksElems.forEach(handlerAccordion);
     // let active = featureLinksElems[0]
     // for (let i = 0; i < featureLinksElems.length; i++) {
     //     featureLinksElems[i].addEventListener('click', () => {
@@ -23,25 +46,25 @@ document.addEventListener('DOMContentLoaded', () => {
     //     })
     // }
 
-    let active = featureLinksElems[0]
-    featureLinksElems.forEach((btn, index) => {
-        btn.addEventListener('click', (e) => {
+    // let active = featureLinksElems[0]
+    // featureLinksElems.forEach((btn, index) => {
+    //     btn.addEventListener('click', (e) => {
 
-            featureSubElems.forEach((featureSubElem) => {
-                featureSubElem.classList.add('hidden')
-            })
-            featureLinksElems.forEach((featureLinksElem) => {
-                featureLinksElem.classList.remove('feature__link_active')
-            })
+    //         featureSubElems.forEach((featureSubElem) => {
+    //             featureSubElem.classList.add('hidden')
+    //         })
+    //         featureLinksElems.forEach((featureLinksElem) => {
+    //             featureLinksElem.classList.remove('feature__link_active')
+    //         })
 
-            if (btn != active) {
-                featureSubElems[index].classList.toggle('hidden');
-                btn.classList.toggle('feature__link_active');
-                active = btn;
-            } else active = null
+    //         if (btn != active) {
+    //             featureSubElems[index].classList.toggle('hidden');
+    //             btn.classList.toggle('feature__link_active');
+    //             active = btn;
+    //         } else active = null
 
-        })
-    })
+    //     })
+    // })
 
 })
 
