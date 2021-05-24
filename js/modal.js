@@ -10,7 +10,7 @@ const closeModal = () => {
 
 //moreElem.addEventListener('click', openModal);
 modalELem.addEventListener('click', (event) => {
-    console.log(event.target);
+    //console.log(event.target);
     const target = event.target;
 
     if (target.classList.contains('overlay') ||
