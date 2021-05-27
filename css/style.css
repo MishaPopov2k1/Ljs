@@ -219,6 +219,17 @@ button{
     margin-left: 62px;
 }
 
+.button-more { 
+    display: flex;
+    background: #1A75E8;
+    padding: 15px 30px 15px 30px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 40px 610px 80px 490px;
+}
+
 .subcribe{
     background: #F2F3F6;
 }
@@ -273,6 +284,13 @@ button{
     line-height: 140%;
     color: #B2B2B2;
     margin-bottom: 10px;
+}
+
+.footer-copyright{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 140%;
+    color: #B2B2B2;
 }
 
 .footer-list{
